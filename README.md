@@ -11,6 +11,7 @@ Adam Piester
 
 ## Need to do, priority number in ():
 Create more sequence diagrams (1)
+
 Create a diagram showing the relationships all connected (2)
 
 Look into hosting a system and database on raspberry pi(5)
