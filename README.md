@@ -9,6 +9,14 @@ Daniel Malloy
 Adam Piester
 
 
+## Need to do, priority number in ():
+Create more sequence diagrams (1)
+Create a diagram showing the relationships all connected (2)
+
+Look into hosting a system and database on raspberry pi(5)
+
+
+
 ## Important links:
 Google doc-
 https://docs.google.com/document/d/1SEyLl6-aYE5YqWALpvFUNY95xVC2mEBakcFFpA_-WrA/edit
