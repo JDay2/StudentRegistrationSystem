@@ -16,6 +16,12 @@ Create a diagram showing the relationships all connected (2)
 
 
 
+### what he said in class:
+need visibility,type,length, name of the attributes 
+need visibility, return type, parameters, name of the operators
+need relationships of the entity classes
+control classes need to be filled in/detailed
+
 ## Important links:
 Google doc-
 https://docs.google.com/document/d/1SEyLl6-aYE5YqWALpvFUNY95xVC2mEBakcFFpA_-WrA/edit
