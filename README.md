@@ -24,7 +24,7 @@ control classes need to be filled in/detailed <br/>
 
 ## Important links:
 Google doc-
-https://docs.google.com/document/d/1SEyLl6-aYE5YqWALpvFUNY95xVC2mEBakcFFpA_-WrA/edit
+https://1drv.ms/w/s!AjG9KskVVSq2rzzt194sTsBgUfWE?e=Y7NpLe
 
 
 Use case diagram-
