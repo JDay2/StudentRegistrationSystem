@@ -8,19 +8,10 @@ Micheal Henson
 Daniel Malloy
 Adam Piester
 
-
-## Need to do, priority number in ():
-Create more sequence diagrams (1)
-
-Create a diagram showing the relationships all connected (2)
+## New Plan:
+everyone pick a use case and try to get it fully 100% working 
 
 
-
-### what he said in class:
-need visibility,type,length, name of the attributes <br/>
-need visibility, return type, parameters, name of the operators <br/>
-need relationships of the entity classes <br/>
-control classes need to be filled in/detailed <br/>
 
 ## Important links:
 Google doc-
