@@ -8,13 +8,8 @@ Micheal Henson
 Daniel Malloy
 Adam Piester
 
-
-## Need to do, priority number in ():
-Create more sequence diagrams (1)
-
-Create a diagram showing the relationships all connected (2)
-
-
+## New Plan:
+everyone pick a use case and try to get it fully 100% working 
 
 ### what he said in class:
 need visibility,type,length, name of the attributes <br/>
