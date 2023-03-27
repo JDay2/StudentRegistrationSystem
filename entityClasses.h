@@ -9,8 +9,8 @@ class user
 {
   public:
 
-   string getUSN();  //sets counter to 0
-   bool checkPassword();    //sets counter to the passed number defaults to 0 if nothing is passed
+   string getUSN();  //gets username
+   bool checkPassword();    //checks password
    void setUSN();  //sets username
    void setPWD();  //sets password
   private:
