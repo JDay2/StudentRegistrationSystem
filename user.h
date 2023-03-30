@@ -26,6 +26,7 @@ class user
    string fname;   // string containing the user's first name
    string lname;   // string containing the user's last name
    int uType; //0 for admin, student, professor
+   int uType; //0 for admin, 1 for student, 2 for professor
 };
 
 #endif
