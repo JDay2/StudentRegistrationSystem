@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include "passwordHider.cpp"
 using namespace std;
 
 
@@ -31,8 +32,11 @@ bool invalidLogIn=false;  //controls the ouput of an error message (if false-> n
     cin>>username;
 
     printf("\nPassword: ");
+    SetStdinEcho(false);  //this hides the password as the user types it is
     cin>>password;
-    
+    SetStdinEcho(true);  //changes it back to showing what the user types in    
+    cout<<password<<"\n";  //prints the password back to terminal for testing only (remove before submit) 
+
     //here is where to put in the check for username and password
     //if either are wrong then raise the inavlidLogIn flag (change to true)
     //if both are good then lower the notLoggedIn flag (change to false)
