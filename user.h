@@ -16,5 +16,5 @@ class user
   private:
    string USN;       //8 characters, first initial then last name up to   
    string password;  //in the control class, can check and control length of password
-   int uType; //0 for admin, student, professor
+   int uType; //0 for admin, 1 for student, 2 for professor
 };
