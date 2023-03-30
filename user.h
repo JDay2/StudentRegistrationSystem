@@ -16,15 +16,5 @@ class user
   private:
    string USN;       //8 characters, first initial then last name up to   
    string password;  //in the control class, can check and control length of password
-   int 
-}
-
-class student : public user
-{
-  public:
-   void viewCourses();     //from SMP calls the view current courses page 
-   void viewPrevCourses(); //
-   student();             //default constructor
-   
+   int uType; //0 for admin, student, professor
 };
-
