@@ -13,7 +13,7 @@ class faculty: public user
 {
    private:
       string department; // stores the faculty member's department
-      string section[6]; // stores the faculty member's taught sections
+      string section[4]; // stores the faculty member's taught sections
 
    public:
       void viewSections(); // prints the sections a faculty member is assigned to
