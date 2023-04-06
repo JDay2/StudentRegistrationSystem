@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string>
-#include <"user.h">
+#include "user.h"
 
 using namespace std;
 
@@ -13,12 +13,12 @@ string user::getUSN()
 
 bool user::checkPassword(string passwordIn)
 {
-   bool success = false;
-   if(PWD == passwordIn)
+   bool check = false;
+   if(password == passwordIn)
    {
-      success = true;
+       check = true;
    }
-   return success;
+   return check;
 }
 
 void user::setUSN(string usnIn)
@@ -28,7 +28,7 @@ void user::setUSN(string usnIn)
 
 void user::setPWD(string pwdIn)
 {
-   PWD = pwdIn;
+   password = pwdIn;
 }
 
 user::user()

@@ -19,6 +19,8 @@ class user
    bool checkPassword(string);    //checks password
    void setUSN(string);  //sets username
    void setPWD(string);  //sets password
+   user();               //default constructor
+   user(string, string, string, string, int);               //parameterized constructor
 
   private:
    string USN;       //8 characters, first initial then last name up to   
