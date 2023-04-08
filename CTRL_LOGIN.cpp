@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdio.h>
+#include <fstream>
+#include <string>
 #include "passwordHider.cpp"
 
 
@@ -8,7 +10,7 @@ using namespace std;
 class login
 {
   public:
-   void loginCtrl();  //gets username
+   void loginCtrl();
   private:
 };
 
@@ -44,11 +46,33 @@ void login::loginCtrl(){
       SetStdinEcho(false);  //this hides the password as the user types it is
       cin>>password;
       SetStdinEcho(true);  //changes it back to showing what the user types in    
-      cout<<password<<"\n";  //prints the password back to terminal for testing only (remove before submit) 
 
-      //here is where to put in the check for username and password
-      //if either are wrong then raise the inavlidLogIn flag (change to true)
-      //if both are good then lower the notLoggedIn flag (change to false)
-   }
+
+      ifstream file("users.txt");
+      if (file.is_open()) {
+          string line;
+          while (getline(file, line)) {
+              // parse the line
+              string user, pass, num, first, last;
+              stringstream ss(line);
+              ss >> user >> pass >> num >> first >> last;
+              if (user == username && pass == password) {
+                  notLoggedIn=false;
+                  
+                  cout << "Number: " << num << endl;
+                  cout << "First name: " << first << endl;
+                  cout << "Last name: " << last << endl;
+              }
+         }
+         invalidLogIn=true;
+         cout << "Invalid username or password." << endl;
+     } else {
+       cout << "Unable to open file." << endl;
+     }
+
+
   }
+
+
+ }
 }
