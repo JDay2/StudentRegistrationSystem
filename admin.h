@@ -1,5 +1,5 @@
-#ifndef faculty_H
-#define faculty_H
+#ifndef admin_H
+#define admin_H
 
 #include <iostream>
 #include <stdlib.h>
@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class faculty: public user
+class admin: public user
 {
    private:
       string department; // stores the faculty member's department
@@ -18,8 +18,8 @@ class faculty: public user
       void viewSections(); // prints the sections a faculty member is assigned to
       void viewRoster(string); // prints the roster of a specified course
 
-      faculty(); // default constructor
-      faculty(string, string, string, string); // parameterized constructor
+      admin(); // default constructor
+      admin(string, string, string, string); // parameterized constructor
 };
 
 #endif

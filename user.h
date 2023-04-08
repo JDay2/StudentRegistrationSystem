@@ -20,14 +20,13 @@ class user
    void setUSN(string);  //sets username
    void setPWD(string);  //sets password
    user();               //default constructor
-   user(string, string, string, string, int);               //parameterized constructor
+   user(string, string, string, string);               //parameterized constructor
 
   private:
    string USN;       //8 characters, first initial then last name up to   
    string password;  //in the control class, can check and control length of password
    string fname;   // string containing the user's first name
    string lname;   // string containing the user's last name
-   int uType; //0 for admin, 1 for student, 2 for professor
 };
 
 #endif
