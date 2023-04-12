@@ -2,16 +2,20 @@
 Text based student registration system built for SWE 
 
 
+
+# Notes
+login works and passes a pointer to a user object back to driver (our main)
+based on utype of current user it calls the appropriate main page
+I have a mock one set up for faculty atm
+
+
+
+
 Collaborators:
 Jacob Day
 Micheal Henson
 Daniel Malloy
 Adam Piester
-
-## New Plan:
-everyone pick a use case and try to get it fully 100% working 
-
-
 
 ## Important links:
 Google doc-
