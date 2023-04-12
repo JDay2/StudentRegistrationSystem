@@ -19,7 +19,7 @@ class faculty: public user
       void viewRoster(string); // prints the roster of a specified course
 
       faculty(); // default constructor
-      faculty(string, string, string, string); // parameterized constructor
+      faculty(string, string, string, string,int); // parameterized constructor
 };
 
 #endif

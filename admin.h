@@ -19,7 +19,7 @@ class admin: public user
       void viewRoster(string); // prints the roster of a specified course
 
       admin(); // default constructor
-      admin(string, string, string, string); // parameterized constructor
+      admin(string, string, string, string,int); // parameterized constructor
 };
 
 #endif

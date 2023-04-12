@@ -68,13 +68,13 @@ user* login::loginCtrl(){
 		  //create a user depending on utype and return
 	 	  //this returns a pointer to the object just fyi
 		  if(utype==0){
-                  admin* current1= new admin(user,pass,first,last); 
+                  admin* current1= new admin(user,pass,first,last,utype); 
 	          return current1;
                   } else if(utype==1){
-                  student* current2= new student(user,pass,first,last);
+                  student* current2= new student(user,pass,first,last,utype);
                   return current2;
                   } else if(utype==2){
-                  faculty* current3= new faculty(user,pass,first,last);
+                  faculty* current3= new faculty(user,pass,first,last,utype);
                   }
 
                                     
@@ -88,7 +88,7 @@ user* login::loginCtrl(){
   }
 
  //here only for compiler can be safely ignored
- admin* current4= new admin("jday","password","jacob","day");
+ admin* current4= new admin("jday","password","jacob","day",1);
  return current4;
 
 }

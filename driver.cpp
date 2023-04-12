@@ -1,6 +1,7 @@
 #include <iostream>
 #include "userImp.cpp"
 #include "CTRL_LOGIN.cpp"
+#include "facultyMainPage_CTRL.cpp"
 
 using namespace std;
 
@@ -15,6 +16,19 @@ int main(){
   //how to use object current
   usercatch=current->getUSN(); 
   cout << endl <<"username: " <<usercatch <<endl;
+
+  if(current->getutype() == 0){
+    cout<< "admin user"<<endl;
+//    adminMainPage(current);
+  } else if(current->getutype() == 1){
+//    studentMainPage(current);
+    cout<< "student user"<<endl;
+  } else if(current->getutype() ==2){
+    facultyMainPage fac;
+    fac.printOptions(current);
+    cout<< "faculty user"<<endl;
+  }
+
 
 
   //free the memory of the object

@@ -11,6 +11,23 @@ string user::getUSN()
    return USN;
 }
 
+string user::getfname()
+{
+   return fname;
+}
+
+string user::getlname()
+{
+   return lname;
+}
+
+int user::getutype()
+{
+
+return utype;
+}
+
+
 bool user::checkPassword(string passwordIn)
 {
    bool check = false;
@@ -39,11 +56,12 @@ user::user()
    lname = "Doe";
 }
 
-user::user(string usnIn, string passwordIn, string fnameIn, string lnameIn)
+user::user(string usnIn, string passwordIn, string fnameIn, string lnameIn, int utypeIn)
 {
 
    USN = usnIn;
    password = passwordIn;
    fname = fnameIn;
    lname = lnameIn;
+   utype = utypeIn;
 }

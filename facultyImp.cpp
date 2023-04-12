@@ -18,7 +18,7 @@ faculty::faculty()
 {
 }
 
-faculty::faculty(string usnIn, string passwordIn, string fnameIn, string lnameIn): user(usnIn, passwordIn, fnameIn, lnameIn)
+faculty::faculty(string usnIn, string passwordIn, string fnameIn, string lnameIn, int utypeIn): user(usnIn, passwordIn, fnameIn, lnameIn, utypeIn)
 {
    // Set faculty values equal to faculty inputs
 }
