@@ -28,7 +28,7 @@ void facultyMainPage::printOptions(user*){
   current=user*;
   bool notSelected = true;
   int pass=0;
-  
+  //need to keep prompting user until a valid input is given
   cout<<"Welcome "<<current->getfname()<<" to the student registration system!"<<endl;
 
   cout<<"Faculty Main Page"<<endl;
