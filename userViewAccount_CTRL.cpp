@@ -3,11 +3,13 @@
 #include <stdio.h>
 #include <string>
 #include "user.h"
+#include <fstream>
 
+//NEEDS ERROR CHECKING
 class userViewAccount()
 {
   public:
-  viewAccount(user*);
+  void viewAccount(user*);
 
   private:
   void modifyAccount(user*);
@@ -32,7 +34,7 @@ void userViewAccount::viewAccount(user*)
      cin>>answer;
 
      if(answer=='Y'){
-     
+       modifyAccount(current);
      }
    case 2:
      //faculty details
@@ -44,4 +46,31 @@ void userViewAccount::viewAccount(user*)
    }
 
 
+}
+
+
+void userViewAccount::modifyAccount(user*)
+{
+  current=user*;
+ 
+  string filename = "users.txt"
+  string search_string;
+  search_string = current->getUSN();
+    
+  ifstream infile(filename);
+  ofstream outfile(filename + ".tmp");
+  string line;
+  while (getline(infile, line)) {
+      if (line.find(search_string) == string::npos) {
+          outfile << line << endl;
+      }
+  }
+  infile.close();
+  outfile.close();
+  remove(filename.c_str());
+  rename((filename + ".tmp").c_str(), filename.c_str());
+
+
+ 
+  cout<<endl<<"Please enter first name: ";
 }
