@@ -26,23 +26,43 @@ class facultyMainPage{
 void facultyMainPage::printOptions(user*){
 
   current=user*;
-  bool notSelected = true;
-  int pass=0;
-  //need to keep prompting user until a valid input is given
-  cout<<"Welcome "<<current->getfname()<<" to the student registration system!"<<endl;
+  bool logoutNotSelected = true;
+  
+  // loops infinitely until a user selects logout, ensuring user is able to perform as many actions as they want during a session
+  while(logoutNotSelected == true)
+  {
+    cout<<"Welcome "<<current->getfname()<<" to the student registration system!"<<endl;
+    cout<<"Faculty Main Page"<<endl;
 
-  cout<<"Faculty Main Page"<<endl;
+    cout<<"1. View Current Courses"<<endl;
+    cout<<"2. View Previous Courses"<<endl;
+    cout<<"3. View Account"<<endl;
+    cout<<"4. Logout"<<endl;
+    
+    int pass = 0;
+    bool validSelection = false; 
+    // loops to check to ensure valid user input
+    while(validSelection == false)
+    {
+      cout<<"Enter selection 1-4:";
+      cin>>pass;
 
-  cout<<"1. View Current Courses"<<endl;
-  cout<<"2. View Previous Courses"<<endl;
-  cout<<"3. View Account"<<endl;
-  cout<<"4. Logout"<<endl;
-
-  cout<<"Enter selection 1-4:";
-  cin>>pass;
-  callAppropriate(pass); 
-
-
+      if(pass == 1 || pass == 2 || pass == 3 || pass == 4)
+      {
+        validSelection == true;
+        callAppropriate(pass);
+        if(pass == 4)
+        {
+          logoutNotSelected = false;
+        }
+      } 
+     
+      else
+      {
+        cout << "Invalid input, please enter a value 1-4." << endl;
+      }
+    }
+  }
 }
 
 
