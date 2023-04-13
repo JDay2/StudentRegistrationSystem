@@ -75,6 +75,7 @@ user* login::loginCtrl(){
                   return current2;
                   } else if(utype==2){
                   faculty* current3= new faculty(user,pass,first,last,utype);
+                  return current3;
                   }
 
                                     

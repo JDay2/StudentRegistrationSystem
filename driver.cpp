@@ -1,7 +1,7 @@
 #include <iostream>
 #include "userImp.cpp"
 #include "CTRL_LOGIN.cpp"
-//#include "facultyMainPage_CTRL.cpp"
+#include "facultyMainPage_CTRL.cpp"
 
 using namespace std;
 
@@ -24,8 +24,8 @@ int main(){
 //    studentMainPage(current);
     cout<< "student user"<<endl;
   } else if(current->getutype() ==2){
-//    facultyMainPage fac;
-//    fac.printOptions(current);
+    facultyMainPage fac;
+    fac.printOptions(current);
     cout<< "faculty user"<<endl;
   }
 

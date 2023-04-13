@@ -3,29 +3,29 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-
-
+#include "userViewAccount_CTRL.cpp"
 
 using namespace std;
 
-class facultyMainPage{
+class facultyMainPage
+{
 
   public:
 
   void printOptions(user*);
 
   private:
-  void callAppropriate(int selection);
+  void callAppropriate(int selection,user*);
 
 
-}
+};
 
 
 
 
-void facultyMainPage::printOptions(user*){
+void facultyMainPage::printOptions(user* passedUser){
 
-  current=user*;
+  user* current=passedUser;
   bool notSelected = true;
   int pass=0;
   //need to keep prompting user until a valid input is given
@@ -40,13 +40,13 @@ void facultyMainPage::printOptions(user*){
 
   cout<<"Enter selection 1-4:";
   cin>>pass;
-  callAppropriate(pass); 
+  callAppropriate(pass,current); 
 
 
 }
 
 
-void facultyMainPage::callAppropriate(int selection)
+void facultyMainPage::callAppropriate(int selection, user* current)
 {
    
   switch(selection){
@@ -58,7 +58,8 @@ void facultyMainPage::callAppropriate(int selection)
       //view previous courses ctrl class call
 
     case 3:
-      
+      userViewAccount hold;
+      hold.viewAccount(current);
     case 4:
       //shut down sustem
 
@@ -66,8 +67,5 @@ void facultyMainPage::callAppropriate(int selection)
     cout<<"Selection not avaliable"<<endl;
  
   }
-
-
-
 
 }
