@@ -58,8 +58,7 @@ void facultyMainPage::callAppropriate(int selection)
       //view previous courses ctrl class call
 
     case 3:
-      //View account control class call
-    
+      
     case 4:
       //shut down sustem
 

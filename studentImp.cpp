@@ -6,13 +6,6 @@
 
 using namespace std;
 
-void student::viewSections()
-{
-}
-
-void student::viewRoster(string requestedSection)
-{
-}
 
 student::student()
 {
