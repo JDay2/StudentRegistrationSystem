@@ -6,6 +6,33 @@
 
 using namespace std;
 
+void student::viewCurrentCourses()
+{
+}
+
+void student::viewPreviousCourses()
+{
+}
+
+void student::viewAccount()
+{
+}
+
+void student::viewCurrentGrades()
+{
+}
+
+void student::viewPreviousGrades()
+{
+}
+
+void student::viewTranscript()
+{
+}
+
+void student::registerforCourses()
+{
+}
 
 student::student()
 {

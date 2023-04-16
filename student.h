@@ -15,7 +15,13 @@ class student: public user
       string department; // stores the faculty member's department
 
    public:
-
+      void viewCurrentCourses();
+      void viewPreviousCourses();
+      void viewAccount();
+      void viewCurrentGrades();
+      void viewPreviousGrades();
+      void viewTranscript();
+      void registerforCourses();
       student(); // default constructor
       student(string, string, string, string,int); // parameterized constructor
 };
