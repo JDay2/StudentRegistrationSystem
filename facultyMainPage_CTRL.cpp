@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include "userViewAccount_CTRL.cpp"
+#include "userViewCourses_CTRL.cpp"
 
 using namespace std;
 
@@ -51,7 +52,7 @@ void facultyMainPage::printOptions(user* passedUser){
       if(pass == 1 || pass == 2 || pass == 3 || pass == 4)
       {
         validSelection == true;
-        callAppropriate(pass);
+        callAppropriate(pass,current);
         if(pass == 4)
         {
           logoutNotSelected = false;

@@ -26,5 +26,5 @@ ywalker 1234lsyj 0 Yara Walker
 zhall 6h079vef 0 Zoe Hall
 jday password 1 Jacob Day
 dmalloy password 1 Daniel Malloy
-apiester password 1 Adam Piester
 mhenson password 1 Michael Henson
+apiester password 1 Adam Piester
