@@ -10,6 +10,14 @@ void faculty::viewSections()
 {
 }
 
+void faculty::set(string u, string p, string fn, string ln)
+{
+  setUSN(u);
+  setPWD(p);
+  setfname(fn);
+  setlname(ln);
+}
+
 void faculty::viewRoster(string requestedSection)
 {
 }
