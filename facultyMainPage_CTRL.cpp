@@ -25,27 +25,8 @@ class facultyMainPage
 
 void facultyMainPage::printOptions(user* passedUser){
 
-<<<<<<< HEAD
+
   user* current=passedUser;
-  bool notSelected = true;
-  int pass=0;
-  //need to keep prompting user until a valid input is given
-  cout<<"Welcome "<<current->getfname()<<" to the student registration system!"<<endl;
-
-  cout<<"Faculty Main Page"<<endl;
-
-  cout<<"1. View Current Courses"<<endl;
-  cout<<"2. View Previous Courses"<<endl;
-  cout<<"3. View Account"<<endl;
-  cout<<"4. Logout"<<endl;
-
-  cout<<"Enter selection 1-4:";
-  cin>>pass;
-  callAppropriate(pass,current); 
-
-
-=======
-  current=user*;
   bool logoutNotSelected = true;
   
   // loops infinitely until a user selects logout, ensuring user is able to perform as many actions as they want during a session
@@ -83,7 +64,6 @@ void facultyMainPage::printOptions(user* passedUser){
       }
     }
   }
->>>>>>> 5db600a957551e32ab4bd6ba3e993a0a65734fc9
 }
 
 
