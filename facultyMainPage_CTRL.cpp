@@ -3,29 +3,30 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-
-
+#include "userViewAccount_CTRL.cpp"
 
 using namespace std;
 
-class facultyMainPage{
+class facultyMainPage
+{
 
   public:
 
   void printOptions(user*);
 
   private:
-  void callAppropriate(int selection);
+  void callAppropriate(int selection,user*);
 
 
-}
+};
 
 
 
 
-void facultyMainPage::printOptions(user*){
+void facultyMainPage::printOptions(user* passedUser){
 
-  current=user*;
+
+  user* current=passedUser;
   bool logoutNotSelected = true;
   
   // loops infinitely until a user selects logout, ensuring user is able to perform as many actions as they want during a session
@@ -66,7 +67,7 @@ void facultyMainPage::printOptions(user*){
 }
 
 
-void facultyMainPage::callAppropriate(int selection)
+void facultyMainPage::callAppropriate(int selection, user* current)
 {
    
   switch(selection){
@@ -78,7 +79,8 @@ void facultyMainPage::callAppropriate(int selection)
       //view previous courses ctrl class call
 
     case 3:
-      
+      userViewAccount hold;
+      hold.viewAccount(current);
     case 4:
       //shut down sustem
 
@@ -86,8 +88,5 @@ void facultyMainPage::callAppropriate(int selection)
     cout<<"Selection not avaliable"<<endl;
  
   }
-
-
-
 
 }
