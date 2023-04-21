@@ -73,5 +73,5 @@ void studentViewTranscript::viewTranscript(user* passeduser)
   }
   infile2.close();     
   avggrade = totalgrade / cnt;
-  cout << "Your Final Average GPA is a: " << avggrade << endl;
+  cout << "Your Final GPA is a: " << avggrade << endl;
 }

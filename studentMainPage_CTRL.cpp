@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include "studentViewTranscript_CTRL.cpp"
+#include "studentRegisterForCourses_CTRL.cpp"
 
 using namespace std;
 bool logoutNotSelected = true;
@@ -79,7 +80,8 @@ void studentMainPage::callAppropriate(int selection, user* current)
        studentViewTranscript hold4;
        hold4.viewTranscript(current);
     case 5:
-
+       studentRegisterForCourses hold5;
+       hold5.registerForCourses(current);
     case 6:
       //shut down sustem
        logoutNotSelected = false;
