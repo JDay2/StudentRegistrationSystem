@@ -47,7 +47,7 @@ user* login::loginCtrl(){
       SetStdinEcho(false);  //this hides the password as the user types it is
       cin>>password;
       SetStdinEcho(true);  //changes it back to showing what the user types in    
-
+      cout<<endl<<endl;
 
       ifstream file("users.txt");
       if (file.is_open()) {

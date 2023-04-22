@@ -15,10 +15,6 @@ int main(){
 
   user* current= loginpage.loginCtrl();
   
-  //how to use object current
-  usercatch=current->getUSN(); 
-  cout << endl <<"username: " <<usercatch <<endl;
-
   if(current->getutype() == 0){
     cout<< "admin user"<<endl;
     adminMainPage adm;

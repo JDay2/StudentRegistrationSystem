@@ -57,7 +57,7 @@ void userViewAccount::modifyAccount(user* passeduser)
 
   int userTypeHold = current->getutype();  
   string passwordcheck = current->getpassword();
-
+  
 
   ifstream infile(filename);
   ofstream outfile(filename + ".tmp");
@@ -116,14 +116,13 @@ void userViewAccount::modifyAccount(user* passeduser)
     }
  
   }
-
+  cout<<endl<<endl;
   SetStdinEcho(true);
 
-  string username = fname.substr(0,1) + lname;
 
   ofstream output_file("users.txt", ios::app);
-  output_file << username << " " << password << " " << userTypeHold << " " << fname << " " << lname << endl;
-  current->set(username,password,fname,lname);
+  output_file << search_string << " " << password << " " << userTypeHold << " " << fname << " " << lname << endl;
+  current->set(search_string,password,fname,lname);
   output_file.close();
 
 
