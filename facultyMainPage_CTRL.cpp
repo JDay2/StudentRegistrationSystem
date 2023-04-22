@@ -85,7 +85,7 @@ void facultyMainPage::callAppropriate(int selection, user* current)
   } else if (selection == 3) {
       userViewAccount hold;
       hold.viewAccount(current);
- 
+
   } else if (selection == 4) {
        // Logs the faculty out
        logoutNotSelectedfac = false;

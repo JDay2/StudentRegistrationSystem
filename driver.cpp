@@ -3,6 +3,7 @@
 #include "CTRL_LOGIN.cpp"
 #include "facultyMainPage_CTRL.cpp"
 #include "studentMainPage_CTRL.cpp"
+#include "adminMainPage_CTRL.cpp"
 
 using namespace std;
 
@@ -16,6 +17,8 @@ int main(){
   
   if(current->getutype() == 0){
     cout<< "admin user"<<endl;
+    adminMainPage adm;
+    adm.printOptions(current);
 //    adminMainPage(current);
   } else if(current->getutype() == 1){
 //    studentMainPage(current);
