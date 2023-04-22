@@ -4,7 +4,7 @@ mhenson password 1 Michael Henson
 apiester password 1 Adam Piester
 ftestt password2 2 facutt testt
 teacher password 2 First Last
-teacher1 password 2 First Last
+lwilliams password 2 First Last
 teacher2 password 2 First Last
 teacher3 password 2 First Last
 teacher4 password 2 First Last

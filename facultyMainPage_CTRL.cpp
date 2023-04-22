@@ -50,7 +50,7 @@ void facultyMainPage::printOptions(user* passedUser){
       cout<<"4. Logout"<<endl;
       cout<<"Enter selection 1-4:";
       cin>>pass;
-
+      cout<<endl;
       if(pass == 1 || pass == 2 || pass == 3 || pass == 4)
       {
         validSelection = true;
