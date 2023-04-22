@@ -72,22 +72,24 @@ void facultyMainPage::printOptions(user* passedUser){
 
 void facultyMainPage::callAppropriate(int selection, user* current)
 {
+   //friendship ended with switch statements not if else is my best friend
    
-  switch(selection){
-
-    case 1:
-      //view current courses ctrl class call
-
-    case 2:
-      //view previous courses ctrl class call
-
-    case 3:
+     if(selection == 1){
+       // Views the students currnet courses
+       userViewCourses hold1;
+       hold1.viewCurrentCourses(current);       
+  } else if (selection == 2){
+       // Views the students preivous courses
+       userViewCourses hold2;
+       hold2.viewPreviousCourses(current);       
+  } else if (selection == 3) {
       userViewAccount hold;
       hold.viewAccount(current);
-    case 4:
-      logoutNotSelectedfac=false;
-      //shut down sustem
  
-  }
+  } else if (selection == 4) {
+       // Logs the faculty out
+       logoutNotSelectedfac = false;
+  } 
+
 
 }
