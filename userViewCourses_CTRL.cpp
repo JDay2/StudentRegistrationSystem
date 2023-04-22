@@ -45,13 +45,13 @@ void userViewCourses::viewCurrentCourses(user* passeduser)
            
            if (file.is_open()) { // check if file is open
               while (getline(file, lines[count])) { // read lines and store them in the array
-                  count++;
+                  if (lines[count].find(search_string) != string::npos) {
+                     count++;
+                     cout << count << ": " << lines[count-1] <<endl;
+                  }
               }
               file.close(); // close the file
 
-              for (int i = 0; i < count; i++) { // prints out the lines and ask the user to select one 
-                 cout << i+1 << ": " << lines[i] << endl; // output the lines
-              }
               int selection; // Variable to hold what the user selects
 	      bool flag = true; // Variable to know if the user selected a proper selection
               char yn = 'y';
