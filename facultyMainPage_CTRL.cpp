@@ -8,7 +8,7 @@
 
 using namespace std;
 
-bool logoutNotSelected=true;
+bool logoutNotSelectedfac=true;
 
 class facultyMainPage
 {
@@ -32,7 +32,7 @@ void facultyMainPage::printOptions(user* passedUser){
   user* current=passedUser;
   
   // loops infinitely until a user selects logout, ensuring user is able to perform as many actions as they want during a session
-  while(logoutNotSelected == true)
+  while(logoutNotSelectedfac == true)
   {
     
     int pass = 0;
@@ -57,7 +57,7 @@ void facultyMainPage::printOptions(user* passedUser){
         callAppropriate(pass,current);
         if(pass == 4)
         {
-          logoutNotSelected = false;
+          logoutNotSelectedfac = false;
         }
       } 
      
@@ -85,7 +85,7 @@ void facultyMainPage::callAppropriate(int selection, user* current)
       userViewAccount hold;
       hold.viewAccount(current);
     case 4:
-      logoutNotSelected=false;
+      logoutNotSelectedfac=false;
       //shut down sustem
  
   }

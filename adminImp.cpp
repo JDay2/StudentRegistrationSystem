@@ -6,11 +6,7 @@
 
 using namespace std;
 
-void admin::viewSections()
-{
-}
-
-void admin::viewRoster(string requestedSection)
+void admin::changeRegistration()
 {
 }
 
