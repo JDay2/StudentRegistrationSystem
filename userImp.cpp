@@ -11,6 +11,11 @@ string user::getUSN()
    return USN;
 }
 
+string user::getpassword()
+{
+   return password;
+}
+
 string user::getfname()
 {
    return fname;
@@ -46,6 +51,21 @@ void user::setUSN(string usnIn)
 void user::setPWD(string pwdIn)
 {
    password = pwdIn;
+}
+
+void user::setfname(string fnameIn)
+{
+   fname = fnameIn;
+}
+
+void user::setlname(string lnameIn)
+{
+   lname = lnameIn;
+}
+
+void user::set(string u, string p, string fn, string ln)
+{
+
 }
 
 user::user()

@@ -39,7 +39,6 @@ user* login::loginCtrl(){
        if(invalidLogIn){ //if the flag is raised that means that they entered invalid login and throws an error msg
          printf("Invalid username and/or password \n");
     }
-      printf("LOGIN \n");
    
       printf("Username: ");
       cin>>username;

@@ -29,11 +29,10 @@ int main(){
   } else if(current->getutype() ==2){
     facultyMainPage fac;
     fac.printOptions(current);
-    cout<< "faculty user"<<endl;
   }
 
 
-
+  cout<<endl<<endl<<endl<<"EXITING SYSTEM"<<endl<<endl;
   //free the memory of the object
   delete current;
   cout << "Thank you for using our system" << endl;

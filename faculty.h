@@ -17,7 +17,6 @@ class faculty: public user
    public:
       void viewSections(); // prints the sections a faculty member is assigned to
       void viewRoster(string); // prints the roster of a specified course
-
       faculty(); // default constructor
       faculty(string, string, string, string,int); // parameterized constructor
 };
