@@ -1,12 +1,25 @@
-Baseline for student
+Baseline for student - DONE
 -1 - View Current Classes
-	if statement to make sure selection is a proper number
 -2 - View Past Classes
-	copy current to past and change filenames
--3 - View Account Details - Jacob
+-3 - View Account Details
 -4 - Transcript
-	Done I think
 -5 - Register for Courses
-	if statement to make sure selection is proper number
 -6 - Logout
-	Done
+
+Baseline for faculty - 
+-1
+-2
+-3
+-4
+-5
+-6
+
+Baseline for admin- 
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+
