@@ -2,3 +2,8 @@ jday csc4580 01 A
 apiester pe3000 02 A
 mhenson psy3600 01 A
 dmalloy csc3450 02 A
+apiester pe3003 02 A
+apiester pe3002 02 A
+apiester pe3004 02 A
+apiester pe3005 02 A
+apiester pe3006 02 A

@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include "userViewAccount_CTRL.cpp"
+#include "userViewCourses_CTRL.cpp"
 
 using namespace std;
 

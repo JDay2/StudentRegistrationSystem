@@ -2,6 +2,7 @@
 #include "userImp.cpp"
 #include "CTRL_LOGIN.cpp"
 #include "facultyMainPage_CTRL.cpp"
+#include "studentMainPage_CTRL.cpp"
 
 using namespace std;
 
@@ -23,6 +24,8 @@ int main(){
   } else if(current->getutype() == 1){
 //    studentMainPage(current);
     cout<< "student user"<<endl;
+    studentMainPage stu;
+    stu.printOptions(current);
   } else if(current->getutype() ==2){
     facultyMainPage fac;
     fac.printOptions(current);
@@ -32,6 +35,6 @@ int main(){
   cout<<endl<<endl<<endl<<"EXITING SYSTEM"<<endl<<endl;
   //free the memory of the object
   delete current;
-
+  cout << "Thank you for using our system" << endl;
   return 0;
 }
