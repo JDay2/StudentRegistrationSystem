@@ -40,34 +40,36 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
               int selection;
               cout << "Enter the line number of the class you want to register for: ";
               cin >> selection;
-              cout << "You selected: " << lines[selection-1] << endl;
-              // write selected line into another file
-              ofstream outfile("studentFutureCourses.txt", ios::app); // open the output file in append mode
-              if (outfile.is_open()) { // check if file is open
-                 string line = lines[selection-1];
-                 ifstream checkfile("studentFutureCourses.txt"); // open the output file for checking
-                 bool exists = false;
-                 string checkline;
-                 while (getline(checkfile, checkline)) { // read lines from output file and check if selected line already exists
-                    if (line == checkline) {
-                       exists = true;
-                       break;
+              if (selection < count + 1){
+                 cout << "You selected: " << lines[selection-1] << endl;
+                 // write selected line into another file
+                 ofstream outfile("studentFutureCourses.txt", ios::app); // open the output file in append mode
+                 if (outfile.is_open()) { // check if file is open
+                    string line = lines[selection-1];
+                    ifstream checkfile("studentFutureCourses.txt"); // open the output file for checking
+                    bool exists = false;
+                    string checkline;
+                    while (getline(checkfile, checkline)) { // read lines from output file and check if selected line already exists
+                       if (line == checkline) {
+                          exists = true;
+                          break;
+                       }
                     }
+                    checkfile.close(); // close the output file for checking
+                    if (exists) { // selected line already exists in output file
+                        cout << "Error: Line already exists in output file." << endl;
+                    }
+                    else { // selected line does not exist in output file, so write it
+                       outfile << usn << " " << line << endl;
+                       cout << "Selected line has been written to output file." << endl;
+                    }
+                    outfile.close(); // close the output file
                  }
-                 checkfile.close(); // close the output file for checking
-                 if (exists) { // selected line already exists in output file
-                     cout << "Error: Line already exists in output file." << endl;
+                 else {
+                    cout << "Unable to open output file." << endl;
                  }
-                 else { // selected line does not exist in output file, so write it
-                    outfile << usn << " " << line << endl;
-                    cout << "Selected line has been written to output file." << endl;
-                 }
-                 outfile.close(); // close the output file
-             }
-             else {
-             cout << "Unable to open output file." << endl;
-             }
-          }
+              } 
+         }
               else {
               cout << "Unable to open file." << endl;
               }

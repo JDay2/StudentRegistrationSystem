@@ -61,7 +61,31 @@ void studentMainPage::printOptions(user* passeduser){
 
 void studentMainPage::callAppropriate(int selection, user* current)
 {
-   
+  if(selection == 1){
+       // Views the students currnet courses
+       userViewCourses hold1;
+       hold1.viewCurrentCourses(current);       
+  } else if (selection == 2){
+       // Views the students preivous courses
+       userViewCourses hold2;
+       hold2.viewPreviousCourses(current);       
+  } else if (selection == 3) {
+       // Views the Students Account
+       userViewAccount hold3;
+       hold3.viewAccount(current);
+  } else if (selection == 4) {
+       // Views the Students Transcript
+       studentViewTranscript hold4;
+       hold4.viewTranscript(current);
+  } else if (selection == 5) {
+       // Displays the students registration
+       studentRegisterForCourses hold5;
+       hold5.registerForCourses(current);
+  } else if (selection == 6) {
+       // Logs the Student out
+       logoutNotSelected = false;
+  }
+/*
   switch(selection){
 
     case 1:
@@ -88,6 +112,5 @@ void studentMainPage::callAppropriate(int selection, user* current)
        break;
     default:
     cout<<"Selection not avaliable"<<endl;
- 
+*/
   }
-}
