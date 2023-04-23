@@ -14,15 +14,12 @@ int main(){
   login loginpage;
 
   user* current= loginpage.loginCtrl();
-  
+ 
+  //calls the main page of the corresponding user type 
   if(current->getutype() == 0){
-    cout<< "admin user"<<endl;
     adminMainPage adm;
     adm.printOptions(current);
-//    adminMainPage(current);
   } else if(current->getutype() == 1){
-//    studentMainPage(current);
-    cout<< "student user"<<endl;
     studentMainPage stu;
     stu.printOptions(current);
   } else if(current->getutype() ==2){
@@ -31,9 +28,9 @@ int main(){
   }
 
 
-  cout<<endl<<endl<<endl<<"EXITING SYSTEM"<<endl<<endl;
+  
   //free the memory of the object
   delete current;
-  cout << "Thank you for using our system" << endl;
+  cout<<endl<<endl<<endl<< "Thank you for using our system" << endl <<endl;
   return 0;
 }

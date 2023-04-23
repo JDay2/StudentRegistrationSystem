@@ -11,10 +11,10 @@
 class adminRegistration
 {
   public:
-  void updateRegistration(user*);
+  void updateRegistration();
 };
 
-void adminRegistration::updateRegistration(user* passeduser)
+void adminRegistration::updateRegistration()
 {
     string filename = "Registration.txt";
     string oldWord = "FALSE";
@@ -42,7 +42,8 @@ void adminRegistration::updateRegistration(user* passeduser)
         remove(filename.c_str()); // Remove the original file
         rename("temp.txt", filename.c_str()); // Rename the temporary file to the original file name
     } else {
-        cout << "Error opening file." << endl;
+        cout << "Error opening file registration.txt." << endl;
+        exit(7);
     }
 
     string inputFilename = "studentCurrentCourses.txt";

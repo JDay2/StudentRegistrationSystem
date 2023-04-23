@@ -5,6 +5,8 @@
 #include <sstream>
 #include "admin.h"
 #include "adminRegister_CTRL.cpp"
+#include "adminUserCDM_CTRL.cpp"
+
 using namespace std;
 bool logoutNotSelectedd = true;
 
@@ -27,23 +29,23 @@ void adminMainPage::printOptions(user* passeduser){
   {
     cout<<"Welcome "<<current->getfname()<<" to the student registration system!"<<endl;
     cout<<"Admin Main Page"<<endl;
-    cout<<"1. View Current Courses"<<endl;
-    cout<<"2. View Previous Courses"<<endl;
+    cout<<"1. CDM users"<<endl;
+    cout<<"2. CDM courses"<<endl;
     cout<<"3. Change Registration"<<endl;
-    cout<<"6. Logout"<<endl;
+    cout<<"4. logout"<<endl;
     
     int pass = 0;
     bool validSelection = false; 
     // loops to check to ensure valid user input
     while(validSelection == false)
     {
-      cout<<"Enter selection 1-6:";
+      cout<<"Enter selection 1-4:";
       cin>>pass;
 
-      if(pass == 1 || pass == 2 || pass == 3 || pass == 4 || pass == 5 || pass == 6){
+      if(pass == 1 || pass == 2 || pass == 3 || pass == 4){
          validSelection = true;
          callAppropriate(pass,current);
-         if(pass == 6){
+         if(pass == 4){
             logoutNotSelectedd = false;
          }
       } 
@@ -60,18 +62,15 @@ void adminMainPage::printOptions(user* passeduser){
 void adminMainPage::callAppropriate(int selection, user* current)
 {
   if(selection == 1){
-       // Views the students currnet courses
+    adminUserCDM hold1;
+    hold1.CDM_CTRLER();
   } else if (selection == 2){
        // Views the students preivous courses
   } else if (selection == 3) {
        // Views the Students Account
        adminRegistration hold3;
-       hold3.updateRegistration(current);
+       hold3.updateRegistration();
   } else if (selection == 4) {
-       // Views the Students Transcript
-       studentViewTranscript hold4;
-       hold4.viewTranscript(current);
-  } else if (selection == 6) {
        // Logs the Student out
        logoutNotSelectedd = false;
   }

@@ -115,4 +115,6 @@ student59 password 1 First Last
 student69 password 1 First Last
 student79 password 1 First Last
 student89 password 1 First Last
+admintest password 0 first last
 student99 password 1 First Last
+jop password 1 jes pos
