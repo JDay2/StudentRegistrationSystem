@@ -1,6 +1,7 @@
+jday password 1 Jacob Day
 dmalloy password 1 Daniel Malloy
 mhenson password 1 Michael Henson
-apiester password 1 Adam Piester
+apiester password 0 Adam Piester
 ftestt password2 2 facutt testt
 teacher password 2 First Last
 lwilliams password 2 First Last
@@ -117,4 +118,3 @@ student89 password 1 First Last
 admintest password 0 first last
 student99 password 1 First Last
 jop password 1 jes pos
-jday password 1 jacob day
