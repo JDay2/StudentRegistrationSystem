@@ -14,7 +14,6 @@ int main(){
   login loginpage;
 
   user* current= loginpage.loginCtrl();
- 
   //calls the main page of the corresponding user type 
   if(current->getutype() == 0){
     adminMainPage adm;

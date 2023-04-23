@@ -27,6 +27,7 @@ void adminMainPage::printOptions(user* passeduser){
   // loops infinitely until a user selects logout, ensuring user is able to perform as many actions as they want during a session
   while(logoutNotSelectedd == true)
   {
+    cout<<endl;
     cout<<"Welcome "<<current->getfname()<<" to the student registration system!"<<endl;
     cout<<"Admin Main Page"<<endl;
     cout<<"1. CDM users"<<endl;
