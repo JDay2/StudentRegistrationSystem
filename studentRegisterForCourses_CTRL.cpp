@@ -24,12 +24,12 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
            getline(file, line); // read one line from the file
            if(line == "TRUE"){
               ifstream file("courseCatalog.txt"); // open the file
-              string lines[100]; // declare an array to store the lines
+              string lines[200]; // declare an array to store the lines
               int count = 0;
-
               if (file.is_open()) { // check if file is open
                  while (getline(file, lines[count])) { // read lines and store them in the array
-                 count++;
+                    count++;
+                    cout << "1" << endl;
                  }
               file.close(); // close the file
 
@@ -50,6 +50,7 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
                     bool exists = false;
                     string checkline;
                     while (getline(checkfile, checkline)) { // read lines from output file and check if selected line already exists
+                       checkline = usn + ' ' +  checkline;
                        if (line == checkline) {
                           exists = true;
                           break;
