@@ -21,13 +21,16 @@ void userViewCourses::viewCurrentCourses(user* passeduser)
      string filename = "facultyCurrentCourses.txt";
      string search_string;
      search_string = current->getUSN();
-
+     
+     
      ifstream infile(filename);
      string line;
      while (getline(infile, line)) {
          if (line.find(search_string) != string::npos) {
              cout << line << endl;
          }
+
+
      }
      infile.close();
   // This is for the student user

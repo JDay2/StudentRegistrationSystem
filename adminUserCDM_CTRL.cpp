@@ -29,21 +29,21 @@ void adminUserCDM::CDM_CTRLER(){
     //prompt admin for choic
     cout<<endl<<endl<<"Would you like to add, delete, or modify a user?";
     cin>>answer;
-    
+
     if(answer=="add" || answer=="Add")
     {
  
-      create();
       notSelected=false;
+      create();
 
     }else if(answer=="delete" || answer == "Delete"){
-      
-      delUser();
+         
       notSelected=false;
+      delUser();
     }else if(answer=="modify" || answer == "Modify"){
     
-     modifyUser();
      notSelected=false;
+     modifyUser();
     
     }
   }
@@ -54,21 +54,24 @@ void adminUserCDM::CDM_CTRLER(){
 void adminUserCDM::create(){
 
   string filename = "users.txt";
+  string newlinegrab;
+
 
   // Prompt the user for five strings, with error checking
-  cout << "Please enter the information of the new user: ";
+  cout <<endl<<endl<< "Please enter the information of the new user: ";
   string s1, s2, s3, s4, s5;
   do {
       cout<<endl<<endl;
       cout << "Enter the username:";
+      getline(cin, newlinegrab); //a newline character is left over in input string do not remove
       getline(cin, s1);
       cout<<endl<<endl;
-  } while (s1.empty());
+  }while (s1.empty());
   do {
       cout << "Enter password (It is recommended to enter a temporary password and let the user change it later) :";
       getline(cin, s2);
       cout<<endl<<endl;
-  } while (s2.empty());
+  }while (s2.empty());
   do {
       cout << "Enter user type (0 for admin, 1 for student, 2 for faculty) :";
       getline(cin, s3);
@@ -97,7 +100,7 @@ void adminUserCDM::create(){
   // Close the file
   outFile.close();
 
-  cout << "The five strings were added to the end of the file.\n";
+  cout << "User added!"<<endl<<endl;
 
 }
 
@@ -207,7 +210,7 @@ void adminUserCDM::delUser(){
 
 
     // Save the modified file
-      ofstream output("user.txt");
+      ofstream output("users.txt");
       for (int i = 0; i < lines.size(); i++) {
           output << lines[i] << endl;
       }

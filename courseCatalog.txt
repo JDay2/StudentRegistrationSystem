@@ -38,5 +38,3 @@ mth2000 01 Math mth2000 FREE FREE FREE
 mth3000 01 Math mth2000 mth3000 FREE FREE
 mth4000 01 Math mth2000 mth3000 mth3000 FREE
 mth5000 01 Math mth2000 mth3000 mth3000 csc1000
-
-
