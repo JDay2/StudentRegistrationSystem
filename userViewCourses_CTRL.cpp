@@ -3,7 +3,10 @@
 #include <stdio.h>
 #include <string>
 #include <fstream>
-
+#include <cctype>
+#include <algorithm>
+#include <vector>
+using namespace std;
 //NEEDS ERROR CHECKING
 class userViewCourses
 {
@@ -71,7 +74,7 @@ void userViewCourses::viewCurrentCourses(user* passeduser)
                        ifstream infile(filename); // opens the file to search
                        string line; // variable to store whole line
                        while (getline(infile, line)) { // while loop to print everything in the file
-                          if (line.find(search_string) != string::npos) { // if statement to only print the lines that the usn is in
+                          if (line.find(search_string) != string::npos) { // 
                              cout << line << endl; // output the line
                           }
                        }
@@ -100,18 +103,62 @@ void userViewCourses::viewPreviousCourses(user* passeduser)
   int userTypeHold = current->getutype();
   
   if(userTypeHold==2){
-     string filename = "facultyPreviousCourses.txt";
-     string search_string;
-     search_string = current->getUSN();
+     
+    /* if the user is a facutly it will print all of their previous courses to the terminal
+    from facultypreviouscourses.txt then it will prompt them to select a course to view the roster
+    if they select 0 it will exit the function howver if they select a course it will open the file
+    named after them and the course and print all of those entries to the terminal */
+    string filename = "facultyPreviousCourses.txt";
+    string search_string;
+    search_string = current->getUSN();
+    int count=1;
 
-     ifstream infile(filename);
-     string line;
-     while (getline(infile, line)) {
-         if (line.find(search_string) != string::npos) {
-             cout << line << endl;
-         }
-     }
-     infile.close();
+    ifstream infile(filename);
+    string line;
+    vector<string> matching_lines;
+    while (getline(infile, line)) {
+      if (line.find(search_string) != string::npos) {
+        cout <<count<< ' '<< line << endl;
+        count++;
+        matching_lines.push_back(line); // Store matching lines in a vector
+      }
+    }
+    infile.close();
+
+    if (matching_lines.empty()) {
+      cout << "No matching lines found." << endl;
+      // Handle this case as needed.
+    } else {
+      cout << "Select a class to view roster or 0 to exit: ";
+      int selected_line_number;
+      cin >> selected_line_number;
+      if (selected_line_number > 0 && selected_line_number <= matching_lines.size()) {
+        string selected_line = matching_lines[selected_line_number - 1];
+        
+        //formatting file name
+        selected_line.erase(remove_if(selected_line.begin(),selected_line.end(),::isspace),selected_line.end());
+        selected_line+=".txt";
+    
+        string filepath = "facultyPreviousRosters/"+selected_line;
+        ifstream file(filepath);
+        string wohoo;
+        
+        if(!file.is_open()){
+          cout<<"Error opening roster file"<<endl<<endl;
+          exit(7); //7 denotes missing file
+        }
+  
+        while(getline(file,wohoo)){
+          cout<< wohoo <<endl;
+        }
+        cout<<endl<<endl;
+        file.close();
+
+      }else if(selected_line_number==0){
+      } else{
+        cout << "Invalid selection." << endl;
+      }
+    }   
   } else if(userTypeHold==1){
      string filename = "studentPreviousCourses.txt";
      string search_string;
