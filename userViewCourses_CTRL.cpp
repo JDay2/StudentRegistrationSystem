@@ -106,7 +106,10 @@ void userViewCourses::viewCurrentCourses(user* passeduser)
               int selection; // Variable to hold what the user selects
 	      bool flag = true; // Variable to know if the user selected a proper selection
               char yn = 'y';
-              while (flag){
+
+
+             //this is commented out because individual assignment grades have been removed for simplicity
+             /* while (flag){
                  cout << "Enter the line number of the class you want to view grades for: ";
                  cin >> selection; // get the line of the class the user wants to view grades for
                  cout << endl;
@@ -130,7 +133,7 @@ void userViewCourses::viewCurrentCourses(user* passeduser)
                        cout << "Please enter a line number: " << endl; // prompt the user again
                     }
                     
-             }
+             }*/
           } else {
               cout << "Unable to open file." << endl; // error if file doesnt exist
           }
