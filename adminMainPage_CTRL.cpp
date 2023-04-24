@@ -68,11 +68,11 @@ void adminMainPage::callAppropriate(int selection, user* current)
   } else if (selection == 2){
        // Views the students preivous courses
   } else if (selection == 3) {
-       // Views the Students Account
+       // Updates the registration status
        adminRegistration hold3;
        hold3.updateRegistration();
   } else if (selection == 4) {
-       // Logs the Student out
+       // Logs the admin out
        logoutNotSelectedd = false;
   }
 }

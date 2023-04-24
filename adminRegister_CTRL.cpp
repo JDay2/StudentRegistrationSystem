@@ -21,13 +21,31 @@ void adminRegistration::updateRegistration()
     string newWord = "CLOSED";
     ifstream inputFile(filename); // Open the file for reading
     ofstream outputFile("temp.txt"); // Open a temporary file for writing
+    bool isValid = false;
+    char ny = 'n';
+    
+    if (inputFile.is_open()) {
+        cout << "Do you want to open/close registration? y/n" << endl;
+        cin >> ny;
+        while (isValid == false)
+        {
+            if (ny == 'n' || ny == 'N' || ny == 'y' || ny == 'Y')
+                isValid == true;
+            else {
+                cout << "Invalid input, please enter y or n." << endl;
+                cin >> ny;
+            }
+        }
+    }
+
+    else {
+        cout << "Error opening file registration.txt." << endl;
+        exit(7);
+    }
 
     if (inputFile.is_open()) {
         string line;
-        char ny = 'n';
-        cout << "Do you want to open/close registration? y/n" << endl;
-        cin >> ny;
-        if(ny == 'y'){
+        if(ny == 'y' || ny == 'Y') {
             while (getline(inputFile, line)) {
                istringstream iss(line);
                string firstWord;
