@@ -6,6 +6,7 @@
 #include "admin.h"
 #include "adminRegister_CTRL.cpp"
 #include "adminUserCDM_CTRL.cpp"
+#include "adminCourseCDM_CTRL.cpp"
 
 using namespace std;
 bool logoutNotSelectedd = true;
@@ -66,7 +67,8 @@ void adminMainPage::callAppropriate(int selection, user* current)
     adminUserCDM hold1;
     hold1.CDM_CTRLER();
   } else if (selection == 2){
-       // Views the students preivous courses
+    adminCourseCDM hold2;
+    hold2.CCDM_CTRLER();
   } else if (selection == 3) {
        // Updates the registration status
        adminRegistration hold3;
