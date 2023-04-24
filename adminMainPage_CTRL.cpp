@@ -70,11 +70,11 @@ void adminMainPage::callAppropriate(int selection, user* current)
     adminCourseCDM hold2;
     hold2.CCDM_CTRLER();
   } else if (selection == 3) {
-       //updates registration
+       // Updates the registration status
        adminRegistration hold3;
        hold3.updateRegistration();
   } else if (selection == 4) {
-       // Logs the Student out
+       // Logs the admin out
        logoutNotSelectedd = false;
   }
 }
