@@ -4,12 +4,12 @@ Text based student registration system built for SWE
 
 
 # Compilation and Login References
-Compilation is performed with g++ driver.cpp
-Program is run with a.out or any user specified name
-Generic Users Credentials Referenced As USERNAME | PASSWORD
-Generic Admin - admin | password
-Generic Faculty - teacher | password
-Generic Student - student | password
+Compilation is performed with g++ driver.cpp <br />
+Program is run with a.out or any user specified name <br /> 
+Generic Users Credentials Referenced As USERNAME | PASSWORD <br />
+Generic Admin - admin | password <br />
+Generic Faculty - teacher | password <br />
+Generic Student - student | password <br />
 
 
 
