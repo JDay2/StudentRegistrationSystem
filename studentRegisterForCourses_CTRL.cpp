@@ -22,7 +22,7 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
 
         if (file.is_open()) { // check if file is open
            getline(file, line); // read one line from the file
-           if(line == "TRUE"){
+           if(line == "OPEN"){
               ifstream file("courseCatalog.txt"); // open the file
               string lines[200]; // declare an array to store the lines
               int count = 0;
