@@ -3,11 +3,20 @@ Text based student registration system built for SWE
 
 
 
+# Compilation and Login References
+Compilation is performed with g++ driver.cpp
+Program is run with a.out or any user specified name
+Generic Users Credentials Referenced As USERNAME | PASSWORD
+Generic Admin - admin | password
+Generic Faculty - teacher | password
+Generic Student - student | password
+
+
+
 # Notes
 login works and passes a pointer to a user object back to driver (our main)
 based on utype of current user it calls the appropriate main page
 I have a mock one set up for faculty atm
-
 
 
 
