@@ -1,2 +1,6 @@
 apiester psy4710 01 Psychology psy2000 pe1000 FREE FREE
 apiester psy4710 01 Psychology psy2000 pe1000 FREE FREE
+jday mth4000 01 Math mth2000 mth3000 mth3000 FREE
+jday his1000 01 History FREE FREE FREE FREE
+jday his1000 01 History FREE FREE FREE FREE
+jday csc3450 01 OperatingSystem csc1000 FREE FREE FREE

@@ -25,6 +25,7 @@ void studentMainPage::printOptions(user* passeduser){
   // loops infinitely until a user selects logout, ensuring user is able to perform as many actions as they want during a session
   while(logoutNotSelected == true)
   {
+    cout<<endl<<endl;
     cout<<"Welcome "<<current->getfname()<<" to the student registration system!"<<endl;
     cout<<"Student Main Page"<<endl;
     cout<<"1. View Current Courses"<<endl;

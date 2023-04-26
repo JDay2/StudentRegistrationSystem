@@ -4,7 +4,6 @@ mhenson password 1 Michael Henson
 apiester password 0 Adam Piester
 ftestt password2 2 facutt testt
 teacher password 2 First Last
-lwilliams password 2 First Last
 teacher2 password 2 First Last
 teacher3 password 2 First Last
 teacher4 password 2 First Last
@@ -118,3 +117,5 @@ student89 password 1 First Last
 admintest password 0 first last
 student99 password 1 First Last
 jop password 1 jes pos
+jday1 password 1 jacob day
+lwilliams password3 2 lwilliams oops

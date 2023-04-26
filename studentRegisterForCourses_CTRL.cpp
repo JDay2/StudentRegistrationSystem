@@ -22,6 +22,7 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
 
         if (file.is_open()) { // check if file is open
            getline(file, line); // read one line from the file
+           line = "TRUE";
            if(line == "TRUE"){
               ifstream file("courseCatalog.txt"); // open the file
               string lines[200]; // declare an array to store the lines
@@ -29,7 +30,6 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
               if (file.is_open()) { // check if file is open
                  while (getline(file, lines[count])) { // read lines and store them in the array
                     count++;
-                    cout << "1" << endl;
                  }
               file.close(); // close the file
 
