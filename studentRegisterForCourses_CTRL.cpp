@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string>
+#include <string.h>
 #include <fstream>
 
 class studentRegisterForCourses
@@ -22,14 +23,18 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
 
         if (file.is_open()) { // check if file is open
            getline(file, line); // read one line from the file
-           if(line == "OPEN"){
+           char lineCheck[4];
+           for (int i = 0 ; i < 4 ; i++) { // reads the first four characters into a char array for comparison
+              lineCheck[i] = line[i];
+           }
+           int openCheck = strcmp(lineCheck, "OPEN"); // performs a string comparison, if it's equal to zero, the reigstration is open
+           if(openCheck == 0){
               ifstream file("courseCatalog.txt"); // open the file
               string lines[200]; // declare an array to store the lines
               int count = 0;
               if (file.is_open()) { // check if file is open
                  while (getline(file, lines[count])) { // read lines and store them in the array
                     count++;
-                    cout << "1" << endl;
                  }
               file.close(); // close the file
 
@@ -38,9 +43,9 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
                  cout << i+1 << ": " << lines[i] << endl;
               }
               int selection;
-              cout << "Enter the line number of the class you want to register for: ";
+              cout << "Enter the line number of the class you want to register for or enter 0 to exit registration: ";
               cin >> selection;
-              if (selection < count + 1){
+              if (selection < count + 1 && selection > 0){
                  cout << "You selected: " << lines[selection-1] << endl;
                  // write selected line into another file
                  ofstream outfile("studentFutureCourses.txt", ios::app); // open the output file in append mode
@@ -69,11 +74,20 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
                  else {
                     cout << "Unable to open output file." << endl;
                  }
-              } 
+              }
+              else if (selection == 0) {
+                 file.close();
+              }
+              else {
+                 cout << endl << "Invalid course selection." << endl << endl; 
+              }
          }
               else {
               cout << "Unable to open file." << endl;
               }
+           }
+           else {
+           cout << endl << "Registration is currently closed." << endl << endl;
            }
         }
         file.close(); // close the file

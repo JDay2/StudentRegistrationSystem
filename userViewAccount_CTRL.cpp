@@ -30,7 +30,7 @@ void userViewAccount::viewAccount(user* passeduser)
      cout<<"Would you like to modify? (Y/N)"<<endl;
      cin>>answer;
 
-     if(answer=='Y'){
+     if(answer == 'Y' || answer == 'y'){
        modifyAccount(current);
      }
    //case 2:
