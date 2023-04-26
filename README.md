@@ -8,7 +8,7 @@ Compilation is performed with g++ driver.cpp <br />
 Program is run with a.out or any user specified name <br /> 
 Generic Users Credentials Referenced As USERNAME | PASSWORD <br />
 Generic Admin - admin | password <br />
-Generic Faculty - ftestt | password <br />
+Generic Faculty - ftestt | password2 <br />
 Generic Student - jday | password <br />
 
 
