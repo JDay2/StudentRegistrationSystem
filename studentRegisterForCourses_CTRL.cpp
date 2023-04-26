@@ -43,9 +43,9 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
                  cout << i+1 << ": " << lines[i] << endl;
               }
               int selection;
-              cout << "Enter the line number of the class you want to register for: ";
+              cout << "Enter the line number of the class you want to register for or enter 0 to exit registration: ";
               cin >> selection;
-              if (selection < count + 1){
+              if (selection < count + 1 && selection > 0){
                  cout << "You selected: " << lines[selection-1] << endl;
                  // write selected line into another file
                  ofstream outfile("studentFutureCourses.txt", ios::app); // open the output file in append mode
@@ -74,7 +74,13 @@ void studentRegisterForCourses::registerForCourses(user* passeduser)
                  else {
                     cout << "Unable to open output file." << endl;
                  }
-              } 
+              }
+              else if (selection == 0) {
+                 file.close();
+              }
+              else {
+                 cout << endl << "Invalid course selection." << endl << endl; 
+              }
          }
               else {
               cout << "Unable to open file." << endl;
