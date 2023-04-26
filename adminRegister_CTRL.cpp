@@ -30,7 +30,7 @@ void adminRegistration::updateRegistration()
         while (isValid == false)
         {
             if (ny == 'n' || ny == 'N' || ny == 'y' || ny == 'Y')
-                isValid == true;
+                isValid = true;
             else {
                 cout << "Invalid input, please enter y or n." << endl;
                 cin >> ny;
